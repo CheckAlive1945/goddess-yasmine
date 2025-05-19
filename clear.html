@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Goddess Yasmine</title>
+  <style>
+    body{
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #c61a6a;
+      text-align: center;}  
+    
+
+    .scrolling-text-horizontal {
+      position: fixed;
+      top: 0;
+      width: 100vw;
+      white-space: nowrap;
+      overflow: hidden;
+      background-color: #000;
+      z-index: 100;
+    }
+
+    .scrolling-text-horizontal span {
+      display: inline-block;
+      padding-left: 100vw;
+      font-size: 1.5rem;
+      animation: scrollHorizontal 40s linear infinite;
+    }
+
+    @keyframes scrollHorizontal {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .scrolling-text-vertical {
+      position: fixed;
+      top: 0;
+      height: 100vh;
+      width: 2rem;
+      font-size: 1.5rem;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    .scrolling-text-vertical span {
+      display: inline-block;
+      writing-mode: vertical-rl;
+      white-space: nowrap;
+      animation: scrollVertical 60s linear infinite;
+      transform: translateY(0%);
+    }
+
+    @keyframes scrollVertical {
+      0% { transform: translateY(20%); }
+      100% { transform: translateY(-200%); }
+    }
+
+    #scrolling-vertical-left { left: 0; }
+    #scrolling-vertical-right { right: 0; }
+
+    .container {
+      padding: 120px 20px 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .translate-btn {
+      background: #c61a6a;
+      color: black;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .translate-btn:hover {
+      background: #a0155a;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .top-image {
+      position: fixed;
+      top: 50px;
+      left: 120px;
+      width: 208px;
+      height: auto;
+      z-index: 10;
+      animation: blink 2s infinite;
+    }
+
+    .top-right-image {
+      position: fixed;
+      top: 20px;
+      right: 50px;
+      width: 200px;
+      height: auto;
+      z-index: 10;
+      animation: blink 3s infinite;
+    }
+
+    /* Responsive Fix for Small Screens */
+    @media (max-width: 600px) {
+      .top-image {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 80%;
+        max-width: 300px;
+        margin: 80px auto 10px;
+      }
+
+      .top-right-image {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 80%;
+        max-width: 300px;
+        margin: 10px auto;
+      }
+
+      .scrolling-text-horizontal span,
+      .scrolling-text-vertical span {
+        font-size: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="https://i.ibb.co/7JG7qqhJ/1000010542.png" alt="First Image" class="top-right-image" />
+  <img src="https://i.ibb.co/0R8vwjkV/Untitled-design.jpg" alt="Description of Image" class="top-image"/>
+
+
+  <div class="scrolling-text-horizontal">
+    <span id="horizontal-text">
+      あなたと歩んできた道は、時に別れてしまうこともありますが、私のあなたへの愛は揺るぎなく、永遠に続きます。時や空間を超えて、私たちの愛は決して消えることなく、むしろますます輝きを増していきます。私があなたと共にいるという夢を追い続けます。たとえ障害があっても、私はあなたの元へ向かって進み続けます。
+    </span>
+  </div>
+
+  <div class="scrolling-text-vertical" id="scrolling-vertical-left">
+    <span id="vertical-left-text">
+      私は心の底から信じています。私たちが共に築く未来を。手を取り合い、人生のすべての季節を共に歩む未来を。私たちの愛はすべての境界を超えて、時間を越え、試練を乗り越えます。私たちの物語は始まったばかりで、私は共に過ごすすべての瞬間を大切にしています。あなたが永遠に愛すべき存在だと、私は確信しています。
+    </span>
+  </div>
+
+  <div class="scrolling-text-vertical" id="scrolling-vertical-right">
+    <span id="vertical-right-text">
+      どんなに遠くにいても、どれだけ時間が経っても、私のあなたへの愛は決して変わることはありません。どこへ行こうとも、私の心はあなたのものです。再び会う日を夢見ながら、毎日のようにその瞬間を待ち続けます。私たちが一緒に歩む未来へと近づいていくたびに、私は一瞬一瞬を大切にして、あなたと共にすべての思い出を作りたいと思っています。
+    </span>
+  </div>
+
+  <div class="container">
+    <h1 id="title">ヤスミン 女神へ <3</h1>
+    <p class="subtitle" id="message">混沌の中で、愛は勝つ。!</p>
+    <button class="translate-btn" onclick="toggleLanguage()">Translate</button>
+  </div>
+
+
+<p id="bottomParagraph" style="color: #c61a6a; padding: 30px; font-size: 1.2rem;">
+  君を永遠に望んでいる。迷いはない。以前より君のことを10倍も知っている。あの指輪は僕にとっての君の価値の1グラムにも及ばない。君がいつも望んでいたように、いつも値していたように、僕は君を愛したい。君と共に人生を終えたいと願っている、愛しいヤスミン<3
+
+
+</p>
+  <script>
+    let inJapanese = true;
+
+    function toggleLanguage() {
+      const title = document.getElementById('title');
+      const message = document.getElementById('message');
+      const horizontalText = document.getElementById('horizontal-text');
+      const verticalLeftText = document.getElementById('vertical-left-text');
+      const verticalRightText = document.getElementById('vertical-right-text');
+      const bottomParagraph = document.getElementById('bottomParagraph');
+
+      if (inJapanese) {
+        title.textContent = 'For Goddess Yasmine <3';
+        message.textContent = 'Amidst chaos, love prevails!';
+        horizontalText.textContent = 'Though the paths we walk may sometimes diverge, my love for you remains steadfast and eternal. Across time and space, our love never fades, it only shines brighter. I will keep chasing the dream of being with you. No matter the obstacles, I will keep moving toward you since obsession is my fuel.';
+        verticalLeftText.textContent = 'Hand in hand, through every season of life. Our love transcends all boundaries, surpasses time, and overcomes every trial. Our story has just begun, and I treasure every moment we share. I am certain that you are someone to be loved forever.';
+        verticalRightText.textContent = 'No matter how far you are or how much time passes, my love for you will never change. Wherever I go, my heart belongs to you. I dream of the day we meet again, and I wait for that moment every single day. As we get closer to the future we walk together, I want to cherish every second and create all our memories together.';
+
+
+         bottomParagraph.textContent = "i want you forever, no hesitation is crossing my mind, i'm ten times more knowledgable about you than before, that ring won't reach a gram of your value to me, i'm eager to love you like you always wanted and always deserved, hoping finish my life with you dear yasmine<3";
+      } 
+
+
+      else {
+        title.textContent = 'ヤスミン 女神へ <3';
+        message.textContent = '混沌の中で、愛は勝つ。!';
+        horizontalText.textContent = 'あなたと歩んできた道は、時に別れてしまうこともありますが、私のあなたへの愛は揺るぎなく、永遠に続きます。時や空間を超えて、私たちの愛は決して消えることなく、むしろますます輝きを増していきます。私があなたと共にいるという夢を追い続けます。たとえ障害があっても、私はあなたの元へ向かって進み続けます。';
+        verticalLeftText.textContent = '私は心の底から信じています。私たちが共に築く未来を。手を取り合い、人生のすべての季節を共に歩む未来を。私たちの愛はすべての境界を超えて、時間を越え、試練を乗り越えます。私たちの物語は始まったばかりで、私は共に過ごすすべての瞬間を大切にしています。あなたが永遠に愛すべき存在だと、私は確信しています。';
+        verticalRightText.textContent = 'どんなに遠くにいても、どれだけ時間が経っても、私のあなたへの愛は決して変わることはありません。どこへ行こうとも、私の心はあなたのものです。再び会う日を夢見ながら、毎日のようにその瞬間を待ち続けます。私たちが一緒に歩む未来へと近づいていくたびに、私は一瞬一瞬を大切にして、あなたと共にすべての思い出を作りたいと思っています。';
+        
+
+        bottomParagraph.textContent = "君を永遠に望んでいる。迷いはない。以前より君のことを10倍も知っている。あの指輪は僕にとっての君の価値の1グラムにも及ばない。君がいつも望んでいたように、いつも値していたように、僕は君を愛したい。君と共に人生を終えたいと願っている、愛しいヤスミン<3";
+      
+
+      }
+
+      inJapanese = !inJapanese;
+    }
+  </script>
+</body>
+</html>
